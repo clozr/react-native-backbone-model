@@ -1,6 +1,6 @@
 {
   "name": "react-native-backbone-model",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Backbone model without views and history API for use with react-native",
   "main": "index.js",
   "scripts": {
