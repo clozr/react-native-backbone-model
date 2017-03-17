@@ -12,9 +12,7 @@ import _ from 'underscore';
 // Initial Setup
 // -------------
 
-// Save the previous value of the `Backbone` variable, so that it can be
-// restored later on, if `noConflict` is used.
-// Create a local reference to a common array method we'll want to use later.
+var Backbone = {}
 var slice = Array.prototype.slice;
 
 // Current version of the library. Keep in sync with `package.json`.
@@ -1312,7 +1310,7 @@ var extend = function(protoProps, staticProps) {
 };
 
 // Set up inheritance for the model, collection, router, view and history.
-Model.extend = Collection.extend;
+Model.extend = Collection.extend = extend;
 
 // Throw an error when a URL is needed, and none is supplied.
 var urlError = function() {
